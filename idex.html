@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type='x icon' href="logo.png">
+    <title>Shivam's Portfolio</title>
+    <link rel="stylesheet" href="Img/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<header> 
+    <div id ="header">
+        <div class="container">
+            <nav>
+                <img src="Img/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About Me</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+</header>
+<body>
+        <div class ="header-text">
+            <p> Student  </p>
+            <h1> Hi, I'm <span> Shivam </span> <br> from Kolkata</h1>
+        </div>
+<!---------------------------------------------------------About SECTION ------------------------------------------------------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+            <div class="about-col-1">
+                <img src="Img/ResumePic_bw.jpg">
+            </div>
+            <div  class="about-col-2">
+                <h1 class="sub-title"> About Me </h1>
+                <p> I am a  Detail oriented, motivated Individual with a strong passion forcontinuously developing and learning technical and interpersonal skills.Currently enrolled in a 3 Year Bachelor’s Degree in ComputerApplication at Christ University. Seeking a challenging opportunity in adynamic environment to further strengthen my technical expertise inJAVA, Python and Web Development using HTML and CSS.</p>
+                <div class="tab-titles"> 
+                    <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+                    <p class="tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                <div class="tab-contents active-tab" id="skills"> 
+                    <ul>
+                        <li><span>Java </span><br>Basics </li>
+                        <li><span>Web Development</span><br> HTML , CSS , Java Script</li>
+                        <li><span>Database Management System</span><br>Basics</li>
+                    </ul>              
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Canva Designing </span><br>Student Welfare Office,Christ University,Dehi</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Christ University Delhi,Ncr</span><br>Bachlors Of Computer Applications</li>
+                    <li><span>Don Bosco School Park Circus,Kolkata</span><br>Class XI - XII <br>Commerce</li>
+                    <li><span>Don Bosco School Park Circus,Kolkata</span><br>Class I - X<br>Science</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenue =document.getElementById("sidemenu");
+        function openmenue  (){
+            sidemenue.style.right="0";
+        }
+        function closemenue() {
+            sidemenue.style.right= "-200px";
+        }
+    </script>
+<!---------------------------------------------------------PROTFOLIO SECTION ------------------------------------------------------>
+<div id="Portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Works</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="Img/Park Ease.jpg">
+            <div class="layer">
+                <h2>Park Ease (Parking Management System)</h2>
+                <p> Developed a Parking Management System utilizing OpenCV, capable of efficiently detecting and displaying the number of available parking spaces in real-time.</p>
+                <a href="https://github.com/shivamthakur21/ParkEase-Parking-Space-Detection"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="Img/CMS.JPG">
+            <div class="layer">
+            <h2>Call Management System: - </h2>
+                <p>A user-friendly call management system built with Python, Tkinter, and MySQL. It streamlines call logging, management, and potentially integrates search functionalities to organize your communication effectively.</p>
+                <a href="https://github.com/shivamthakur21/Call-Management-System"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>   
+            </div> 
+        </div> 
+        </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+</div>
+</div>
+<!---------------------------------------------------------Contact SECTION -------------------------------------------------------->
+<div id="contact">
+    <div class="cotaniner">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title"> Contact Me</h1>
+            <p> <i class="fa-solid fa-envelope"></i>shivamthakur21@gmail.com</p>
+            <p> <i class="fa-solid fa-mobile-screen"></i>9038973077</p>
+            <div class="social-icons">
+                <a href="https://www.github.com"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="Img/CV/Shivam Thakur CV.pdf" download class="btn btn2"> Download CV </a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <form method="post" action="https://script.google.com/macros/s/AKfycbwqZHsqGKwhsnaD_NdKqjhSrYDlF3L4f52oH5aigfM9wWnrDWPinKmtMSwxqb4HMQDDuw/exec"
+                name="contact-form">
+                <input type="text" name="your-name" placeholder="Name">
+                <input type="text" name="your-number" placeholder="Number">
+                <input type="email" name="your-email" placeholder="Email">
+                <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+                <input type="submit" value="Submit" id="btn2">
+            </form>
+        </div>
+        <script src="Img/Google Sheet.js"></script>
+            <span id="msg"> </span>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p> copyright @ Shivam </p>
+</div>
+
+</div>
+<script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tab-link of tab-links){
+                tab-link.classlist.remove("active-links");
+            }
+            for(tab-content of tab-contents){
+                tab-content.classlist.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add( "active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu =document.getElementById("sidemenu");
+        function openmenu  (){
+            sidemenu.style.right="0";
+        }
+        function closemenu() {
+            sidemenu.style.right= "-200px";
+        }
+    </script>
+</body>
+</html>
